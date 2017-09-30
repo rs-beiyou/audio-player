@@ -1,19 +1,3 @@
-/* *
- * audio visualizer with html5 audio element
- *
- * v0.1.0
- *
- * licenced under the MIT license
- *
- * see my related repos:
- * - HTML5_Audio_Visualizer https://github.com/wayou/HTML5_Audio_Visualizer
- * - 3D_Audio_Spectrum_VIsualizer https://github.com/wayou/3D_Audio_Spectrum_VIsualizer
- * - selected https://github.com/wayou/selected
- * - MeowmeowPlayer https://github.com/wayou/MeowmeowPlayer
- *
- * reference: http://www.patrick-wied.at/blog/how-to-create-audio-visualizations-with-javascript-html
- */
-
 window.AudioContext = window.AudioContext || window.webkitAudioContext || window.mozAudioContext;
 
 window.onload = function() {
@@ -26,7 +10,6 @@ window.onload = function() {
     analyser.connect(ctx.destination);
     var frequencyData = new Uint8Array(analyser.frequencyBinCount);
 
-    // we're ready to receive some data!
     var canvas = document.getElementById('canvas'),
         cwidth = canvas.width,
         cheight = canvas.height - 2,
