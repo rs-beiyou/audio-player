@@ -2,6 +2,8 @@ window.AudioContext = window.AudioContext || window.webkitAudioContext || window
 
 window.onload = function() {
     var audio = document.getElementById('audio');
+    audio.crossOrigin = 'anonymous';
+    audio.src='http://ox31jkf5p.bkt.clouddn.com/5.mp3';
     var ctx = new AudioContext();
     var analyser = ctx.createAnalyser();
     var audioSrc = ctx.createMediaElementSource(audio);
